@@ -1,4 +1,4 @@
-# Chatroom Angular Firebase ([Demo](https://codesandbox.io/s/xpxk58xkmo))
+# Chatroom Angular Firebase ([Demo](https://codesandbox.io/s/3y2p13q41p))
 
 This application was built based on [the tutorial videos of Mr. Wes Doyle](https://www.youtube.com/watch?v=-j0LVc-zLh0&list=PL3_YUnRN3UhhvJIIYH-UUb4mj8uYpnQuP)
 

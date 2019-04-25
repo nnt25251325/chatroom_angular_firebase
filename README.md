@@ -1,6 +1,6 @@
 # Chatroom Angular Firebase
 
-This application was built based on the tutorial videos of Mr. Wes Doyle
+This application was built based on [the tutorial videos of Mr. Wes Doyle](https://www.youtube.com/watch?v=-j0LVc-zLh0&list=PL3_YUnRN3UhhvJIIYH-UUb4mj8uYpnQuP)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 

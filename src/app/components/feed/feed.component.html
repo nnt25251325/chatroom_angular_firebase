@@ -1,0 +1,10 @@
+<div class="feed-list" #scroller>
+	<div class="messages">
+		<div *ngFor="let message of feed | async" class="message">
+			<app-message
+				[chatMessage]="message"
+				(updateMessage)="onUpdateMessage(message)"
+			></app-message>
+		</div>
+	</div>
+</div>

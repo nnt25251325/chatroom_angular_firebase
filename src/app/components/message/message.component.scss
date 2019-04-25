@@ -1,0 +1,38 @@
+.message-inner {
+	max-width: 90%;
+	&.is-own-message {
+		text-align: right;
+		margin-right: 0;
+		margin-left: auto;
+		.message-content {
+			background: #cff1ff;
+			text-align: left;
+		}
+	}
+	.message-head {
+		.sender,
+		.timestamp {
+			font-size: 12px;
+			font-style: normal;
+			color: #aaa;
+		}
+		.sender {
+			font-weight: bold;
+			font-size: 14px;
+			color: #09cefe;
+		}
+	}
+	.message-content {
+		display: inline-block;
+		vertical-align: middle;
+		background: #e3eaf1;
+		border-radius: 8px;
+		padding: 10px;
+		.box-action {
+			text-align: right;
+			a {
+				font-size: 11px;
+			}
+		}
+	}
+}

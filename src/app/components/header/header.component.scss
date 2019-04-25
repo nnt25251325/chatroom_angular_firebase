@@ -1,0 +1,44 @@
+header {
+	.main-nav {
+		background: #e3eaf1;
+		.nav-inner {
+			position: relative;
+			height: 70px;
+		}
+		.heading {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+			a {
+				font-weight: bold;
+				font-size: 30px;
+				color: #4c5e70;
+				text-decoration: none;
+				&:hover {
+					color: #09cefe;
+				}
+			}
+		}
+		.links {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+			a,
+			.user-email {
+				font-weight: bold;
+				font-size: 16px;
+				color: #4c5e70;
+				text-decoration: none;
+				margin-right: 15px;
+				&:hover {
+					color: #09cefe;
+				}
+			}
+			.user-email {
+				color: #09cefe;
+			}
+		}
+	}
+}

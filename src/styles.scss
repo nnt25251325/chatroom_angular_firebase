@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+a,
+button,
+.btn {
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+a {
+	color: #09cefe;
+	&:hover,
+	&:focus,
+	&:active {
+		color: darken(#09cefe, 10%);
+	}
+}
+.btn-primary {
+	background: #09cefe !important;
+	border-color: #09cefe !important;
+	&:hover,
+	&:focus,
+	&:active {
+		background: darken(#09cefe, 10%) !important;
+		border-color: darken(#09cefe, 10%) !important;
+	}
+}
+.form-control.is-invalid {
+	border-color: #d9534f;
+}

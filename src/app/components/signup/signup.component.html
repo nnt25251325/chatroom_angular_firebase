@@ -1,0 +1,56 @@
+<div class="signup-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<form class="form" [formGroup]="formSignUp" (ngSubmit)="onSignUp()">
+					<legend>Sign Up</legend>
+					<div class="form-group">
+						<label>Email</label>
+						<input
+							type="text"
+							name="email"
+							class="form-control"
+							placeholder="Enter your email address"
+							formControlName="email"
+							[ngClass]="{ 'is-invalid': isSubmitted && f.email.errors }"
+						/>
+						<span *ngIf="isSubmitted && f.email.errors?.required" class="label label-danger">Email is require.</span>
+						<span *ngIf="isSubmitted && f.email.errors?.pattern" class="label label-danger">Email is badly formatted</span>
+					</div>
+					<div class="form-group">
+						<label>Password</label>
+						<input
+							type="password"
+							name="password"
+							class="form-control"
+							placeholder="Choose a password"
+							formControlName="password"
+							[ngClass]="{ 'is-invalid': isSubmitted && f.password.errors }"
+						/>
+						<span *ngIf="isSubmitted && f.password.errors?.required" class="label label-danger">Password is required</span>
+						<span *ngIf="isSubmitted && f.password.errors?.minlength" class="label label-danger">Password should be at least 6 characters</span>
+					</div>
+					<div class="form-group">
+						<label>Display name</label>
+						<input
+							type="text"
+							name="displayName"
+							placeholder="Enter a display name"
+							class="form-control"
+							formControlName="displayName"
+							[ngClass]="{ 'is-invalid': isSubmitted && f.displayName.errors }"
+						/>
+						<span *ngIf="isSubmitted && f.displayName.errors?.required" class="label label-danger">Display name is required</span>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-block btn-lg btn-primary">
+							Sign Up
+							&nbsp;<img *ngIf="isLoading" src="data:image/gif;base64,R0lGODlhFAAUAPAAAP////7+/iH5BAkKAAAAIf4aQ3JlYXRlZCB3aXRoIGFqYXhsb2FkLmluZm8AIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAFAAUAAACJoSPqcudAZ2CUSIaJGX1dc9Z4kgeH5eZqXOW7ttsS2uss0hrNpwUACH5BAkKAAAALAAAAAAUABQAAAImhI+py50RHINRvgrgbFR1/1lHKJamJqGGymHmC5ckwtKO28Z1nBQAIfkECQoAAAAsAAAAABQAFAAAAiaEj6nL7Y9CgErSySSOdmnKgeLzGV2jbWdWiusIs1vyHnN13XnsFAAh+QQJCgAAACwAAAAAFAAUAAACJoSPqcvtj0KAStLJbNWb+g8aHDBmXLlIWMiy6rZGb9XMDgrhrVEAACH5BAkKAAAALAAAAAAUABQAAAInhI+py+2PQoBK0sls1Zv6D2aYwwGlGKaqcbKtO0bRKMVLbT94WC8FACH5BAkKAAAALAAAAAAUABQAAAIlhI+py+2PQoBK0sls1Zv6D2aYwwGlGKbkCUljwpqx8TZueINzAQAh+QQJCgAAACwAAAAAFAAUAAACJ4SPqcvtj0KAStLJbNWb+n9I2CeO2Vg+HLCCriG68dLCdXiZ3v0eBQAh+QQJCgAAACwAAAAAFAAUAAACJoSPqcvtj0KAYB4JpVWYd79o1NhspPh8qPOR7juuSRuxFH2bsFIAADs=" />
+						</button>
+					</div>
+					<p class="alert alert-danger" *ngIf="errorMsg">Error: {{ errorMsg }}</p>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

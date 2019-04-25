@@ -1,0 +1,22 @@
+<div class="chat-form-wrapper">
+	<div class="form-chat">
+		<button
+			type="button"
+			class="btn-edit btn btn-sm btn-warning"
+			*ngIf="isEditing"
+			(click)="chatMessage = null; message = ''; isEditing = false;"
+		>Cancel Edit</button>
+		<div class="input-group">
+			<input
+				type="text"
+				class="form-control"
+				[ngClass]="{ 'is-editing': isEditing }"
+				[(ngModel)]="message"
+				(keydown)="handleSubmit($event)"
+			>
+			<span class="input-group-btn">
+				<button type="button" class="btn btn-primary" (click)="send()">SEND</button>
+			</span>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+.signup-page {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: calc(100vh - 70px);
+	background: #4c5e70;
+	padding: 50px 0;
+	.form {
+		background: #fff;
+		padding: 25px;
+		legend {
+			font-weight: bold;
+			font-size: 28px;
+			color: #4c5e70;
+			border: 0;
+			text-align: center;
+		}
+		label {
+			color: #4c5e70;
+		}
+	}
+}

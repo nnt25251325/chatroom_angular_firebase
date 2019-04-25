@@ -1,0 +1,15 @@
+<header>
+	<div class="main-nav">
+		<div class="container-fluid">
+			<div class="nav-inner">
+				<div class="heading"><a routerLink="/">Chat Room</a></div>
+				<div class="links">
+					<a *ngIf="!currentUser" routerLink="/login">Login</a>
+					<a *ngIf="!currentUser" routerLink="/signup">Sign Up</a>
+					<span *ngIf="currentUser" class="user-email">Hello, {{ currentUser.email }}</span>
+					<a *ngIf="currentUser" (click)="logout()">Logout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

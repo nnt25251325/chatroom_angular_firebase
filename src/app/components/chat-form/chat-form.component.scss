@@ -1,0 +1,38 @@
+.chat-form-wrapper {
+	height: 70px;
+	background: #f0f3f7;
+	padding: 10px 0;
+}
+.form-chat {
+	position: relative;
+	max-width: 1050px;
+	padding: 0 25px;
+	margin: auto;
+	.btn-edit {
+		position: absolute;
+		left: 25px;
+		bottom: 115%;
+		padding: 1px 6px;
+		z-index: 10;
+	}
+	.input-group {
+		.form-control {
+			height: 50px;
+			font-size: 16px;
+			box-shadow: none;
+			border: 1px solid #09cefe;
+			border-radius: 8px 0 0 8px;
+			&.is-editing {
+				background: #e0e0e0;
+			}
+		}
+		.input-group-btn {
+			.btn {
+				font-weight: bold;
+				font-size: 16px;
+				border-radius: 0 8px 8px 0;
+				padding: 13px 30px;
+			}
+		}
+	}
+}

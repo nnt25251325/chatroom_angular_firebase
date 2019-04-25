@@ -1,0 +1,14 @@
+<div class="message-inner" [ngClass]="{'is-own-message': isOwnMessage}">
+	<div class="message-head">
+		<span class="sender">{{ chatMessage.userName }}</span>,&nbsp;
+		<span class="timestamp">{{ chatMessage.timeSent | date: 'medium' }}</span>
+	</div>
+	<div class="message-content">
+		<div class="txt">{{ chatMessage.message }}</div>
+		<div class="box-action" *ngIf="isOwnMessage">
+			<a class="text-info" (click)="updateMessageConnector.emit()">Edit</a>
+			&nbsp;|&nbsp;
+			<a class="text-danger" (click)="onDeleteMessage(chatMessage.key)">Delete</a>
+		</div>
+	</div>
+</div>

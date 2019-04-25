@@ -1,0 +1,9 @@
+<div class="chatroom-page">
+	<div class="user-list-wrapper">
+		<app-user-list></app-user-list>
+	</div>
+	<div class="feed-wrapper">
+		<app-feed (updateMessage)="objMessage = $event"></app-feed>
+		<app-chat-form [objMessage]="objMessage"></app-chat-form>
+	</div>
+</div>
